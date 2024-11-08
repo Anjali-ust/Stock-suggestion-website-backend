@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: stock-userdetails
+  data:
+    mongodb:
+      uri: mongodb+srv://anagh11:anagh11@stockcluster.dl7kn.mongodb.net/?retryWrites=true&w=majority&appName=StockCluster
+      database: stock-usercredentials
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8921/eureka/
+
+server:
+  port: 7061

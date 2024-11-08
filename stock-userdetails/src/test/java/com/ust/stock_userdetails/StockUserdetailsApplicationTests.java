@@ -1,4 +1,4 @@
-package com.example.stock_userdetails;
+package com.ust.stock_userdetails;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
