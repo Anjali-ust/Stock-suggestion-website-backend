@@ -1,4 +1,4 @@
-package com.ust.stock_userdetails.model;
+package com.ust.stock_userdetails.Model;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;

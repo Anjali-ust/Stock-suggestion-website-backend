@@ -8,16 +8,16 @@ public class UserQuestionAnswer {
     @Id
     private String  answerId;
     private String userAnswer;
-    private String userId;
+    private String username;
     private String questionId;
 
     public UserQuestionAnswer() {
     }
 
-    public UserQuestionAnswer(String answerId, String userAnswer, String userId, String questionId) {
+    public UserQuestionAnswer(String answerId, String userAnswer, String username, String questionId) {
         this.answerId = answerId;
         this.userAnswer = userAnswer;
-        this.userId = userId;
+        this.username = username;
         this.questionId = questionId;
     }
 
@@ -37,12 +37,12 @@ public class UserQuestionAnswer {
         this.userAnswer = userAnswer;
     }
 
-    public String getUserId() {
-        return userId;
+    public String getUsername() {
+        return username;
     }
 
-    public void setUserId(String userId) {
-        this.userId = userId;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getQuestionId() {

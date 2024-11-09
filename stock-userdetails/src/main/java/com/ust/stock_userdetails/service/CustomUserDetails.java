@@ -3,7 +3,7 @@ package com.ust.stock_userdetails.service;
 import java.util.Collection;
 import java.util.List;
 
-import com.ust.stock_userdetails.model.UserCredentials;
+import com.ust.stock_userdetails.Model.UserCredentials;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;

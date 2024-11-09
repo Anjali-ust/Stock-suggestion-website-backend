@@ -41,7 +41,7 @@ public class UserQuestionAnswerService {
             UserQuestionAnswer existingAnswer = answerOptional.get();
             existingAnswer.setAnswerId(answer.getAnswerId());
             existingAnswer.setUserAnswer(answer.getUserAnswer());
-            existingAnswer.setUserId(answer.getUserId());
+            existingAnswer.setUsername(answer.getUsername());
             existingAnswer.setQuestionId(answer.getQuestionId());
             return answerRepository.save(existingAnswer);
         }
