@@ -1,8 +1,7 @@
 package com.ust.stock_category.controller;
 
-import com.ust.stock_category.CategoryService;
+import com.ust.stock_category.service.CategoryService;
 import com.ust.stock_category.model.Category;
-import org.apache.http.HttpStatus;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

@@ -1,4 +1,4 @@
-package com.ust.stock_category;
+package com.ust.stock_category.service;
 
 import com.ust.stock_category.model.Category;
 import com.ust.stock_category.repository.CategoryRepository;
@@ -41,6 +41,7 @@ public class CategoryService {
         Optional<Category> categoryOptional = categoryRepository.findById(id);
         if(categoryOptional.isPresent()){
             Category existingCategory = categoryOptional.get();
+            existingCategory.setCategoryId(category.getCategoryId());
             existingCategory.setCategoryName(category.getCategoryName());
             return categoryRepository.save(existingCategory);
         }

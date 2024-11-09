@@ -27,7 +27,7 @@ public class UserQuestionsController {
     }
 
     @GetMapping("/get-question-by-id/{id}")
-    public ResponseEntity<UserQuestions> getCategoryById(@PathVariable(name="id") String id){
+    public ResponseEntity<UserQuestions> getQuestionById(@PathVariable(name="id") String id){
         Optional<UserQuestions> questionOptional = userQuestionsService.getQuestionById(id);
         if(questionOptional.isPresent()){
             return ResponseEntity.ok().body(questionOptional.get());
@@ -40,8 +40,8 @@ public class UserQuestionsController {
     public ResponseEntity<String> deleteQuestionById(@PathVariable(name = "id") String id){
         return ResponseEntity.ok().body(userQuestionsService.deleteQuestionById(id));
     }
-    @PutMapping("/update-category/{id}")
-    public ResponseEntity<?> updateCategory(@PathVariable(name="id") String id,@RequestBody UserQuestions question){
+    @PutMapping("/update-question/{id}")
+    public ResponseEntity<?> updateQuestion(@PathVariable(name="id") String id,@RequestBody UserQuestions question){
         UserQuestions updatedQuestion = userQuestionsService.updateQuestion(id,question);
         if(updatedQuestion == null){
             return ResponseEntity.ok().body("Branch not found");

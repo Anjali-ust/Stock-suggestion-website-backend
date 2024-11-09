@@ -47,6 +47,7 @@ public class UserQuestionsService {
         Optional<UserQuestions> questionOptional = userQuestionsRepository.findById(id);
         if (questionOptional.isPresent()) {
             UserQuestions existingQuestion = questionOptional.get();
+            existingQuestion.setQuestionId(question.getQuestionId());
             existingQuestion.setQuestionDescription(question.getQuestionDescription());
             existingQuestion.setOptionA(question.getOptionA());
             existingQuestion.setOptionB(question.getOptionB());
