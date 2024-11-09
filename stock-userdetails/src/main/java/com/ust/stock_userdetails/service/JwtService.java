@@ -1,4 +1,4 @@
-package com.ust.stock_userdetails.Service;
+package com.ust.stock_userdetails.service;
 
 import java.security.Key;
 import java.util.Date;

@@ -1,6 +1,6 @@
-package com.ust.stock_userdetails.Config;
+package com.ust.stock_userdetails.config;
 
-import com.ust.stock_userdetails.Service.CustomUserDetailsService;
+import com.ust.stock_userdetails.service.CustomUserDetailsService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
