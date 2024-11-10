@@ -1,11 +1,10 @@
 package com.ust.stock_userdetails.service;
 
-import com.ust.stock_userdetails.Model.UserCredentials;
+import com.ust.stock_userdetails.model.UserCredentials;
 import com.ust.stock_userdetails.client.Category;
 import com.ust.stock_userdetails.client.FullResponse;
 import com.ust.stock_userdetails.feign.CategoryClient;
 import com.ust.stock_userdetails.repository.UserCredentialsRepo;
-import org.apache.catalina.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;

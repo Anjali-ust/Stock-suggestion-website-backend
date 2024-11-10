@@ -1,7 +1,7 @@
 package com.ust.stock_userdetails.service;
 import java.util.Optional;
 
-import com.ust.stock_userdetails.Model.UserCredentials;
+import com.ust.stock_userdetails.model.UserCredentials;
 import com.ust.stock_userdetails.repository.UserCredentialsRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;

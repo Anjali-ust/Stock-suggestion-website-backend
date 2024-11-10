@@ -1,7 +1,7 @@
 package com.ust.stock_userdetails.controller;
 
 
-import com.ust.stock_userdetails.Model.UserCredentials;
+import com.ust.stock_userdetails.model.UserCredentials;
 import com.ust.stock_userdetails.client.FullResponse;
 import com.ust.stock_userdetails.service.JwtService;
 import com.ust.stock_userdetails.service.UserCredentialsService;

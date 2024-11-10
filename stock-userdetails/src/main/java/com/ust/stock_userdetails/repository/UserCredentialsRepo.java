@@ -1,7 +1,7 @@
 package com.ust.stock_userdetails.repository;
 
 
-import com.ust.stock_userdetails.Model.UserCredentials;
+import com.ust.stock_userdetails.model.UserCredentials;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 

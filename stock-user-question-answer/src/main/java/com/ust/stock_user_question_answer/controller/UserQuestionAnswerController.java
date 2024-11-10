@@ -1,5 +1,6 @@
 package com.ust.stock_user_question_answer.controller;
 
+import com.ust.stock_user_question_answer.dto.UserQuestionResponseDto;
 import com.ust.stock_user_question_answer.model.UserQuestionAnswer;
 import com.ust.stock_user_question_answer.service.UserQuestionAnswerService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -49,5 +50,11 @@ public class UserQuestionAnswerController {
         else{
             return ResponseEntity.ok().body(updatedAnswer);
         }
+    }
+
+    //endpoint to get questions with answer given the username
+    @GetMapping("/get-questions-with-answers/{username}")
+    public UserQuestionResponseDto getUserQuestionsWithAnswers(@PathVariable("username") String username) {
+        return answerService.getUserQuestionsWithAnswers(username);
     }
 }
