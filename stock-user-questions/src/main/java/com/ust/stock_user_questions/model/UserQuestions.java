@@ -14,7 +14,6 @@ public class UserQuestions {
     private String optionC;
     private String optionD;
     private String categoryId;
-
     public UserQuestions() {
     }
 
@@ -83,4 +82,5 @@ public class UserQuestions {
     public void setOptionD(String optionD) {
         this.optionD = optionD;
     }
+    
 }

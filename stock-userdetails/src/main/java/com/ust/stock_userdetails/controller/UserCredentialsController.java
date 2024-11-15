@@ -85,4 +85,19 @@ public class UserCredentialsController {
         return ResponseEntity.ok()
                 .body(userCredentialsService.getCategoryByUsername(username));
     }
+    
+    @PatchMapping("/update-questionnaire-status/{username}")
+    public ResponseEntity<String> updateQuestionnaireStatus(@PathVariable String username, @RequestParam boolean status) {
+        boolean updated = userCredentialsService.updateQuestionnaireStatus(username, status);
+        if (updated) {
+            return ResponseEntity.ok("Questionnaire status updated successfully.");
+        }
+        return ResponseEntity.notFound().build();
+    }
+    
+   @GetMapping("/get-questionnaire-status/{username}")
+   public ResponseEntity<Boolean> getQuestionnaireStatus(@PathVariable String username){
+	   return ResponseEntity.ok().body(userCredentialsService.getQuestionnaireStatus(username));
+	   
+   }
 }

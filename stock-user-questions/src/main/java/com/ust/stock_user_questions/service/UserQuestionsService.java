@@ -52,6 +52,8 @@ public class UserQuestionsService {
             existingQuestion.setOptionA(question.getOptionA());
             existingQuestion.setOptionB(question.getOptionB());
             existingQuestion.setOptionC(question.getOptionC());
+            existingQuestion.setOptionD(question.getOptionD());
+            existingQuestion.setCategoryId(question.getCategoryId());
             return userQuestionsRepository.save(existingQuestion);
         }
         return null;

@@ -11,6 +11,7 @@ public class UserCredentials {
     private String password;
     private String email;
     private String categoryId;
+    private boolean questionnaireStatus=false;
 
     public UserCredentials(){}
 
@@ -43,5 +44,13 @@ public class UserCredentials {
 
     public String getPassword(){return password;}
     public void setPassword(String password){this.password = password;}
+    
+    public boolean isQuestionnaireStatus() {
+        return questionnaireStatus;
+    }
+
+    public void setQuestionnaireStatus(boolean questionnaireStatus) {
+        this.questionnaireStatus = questionnaireStatus;
+    }
 
 }

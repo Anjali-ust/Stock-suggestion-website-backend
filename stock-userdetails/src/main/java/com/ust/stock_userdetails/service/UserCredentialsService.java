@@ -79,4 +79,20 @@ public class UserCredentialsService {
         response = new FullResponse(username,category);
         return response;
     }
+    
+    public boolean updateQuestionnaireStatus(String username, boolean status) {
+        Optional<UserCredentials> user = userCredentialsRepo.findByUsername(username);
+        if (user.isPresent()) {
+            UserCredentials existingUser = user.get();
+            existingUser.setQuestionnaireStatus(status);
+            userCredentialsRepo.save(existingUser);
+            return true;
+        }
+        return false;
+    }
+    
+    public boolean getQuestionnaireStatus(String username) {
+    	 UserCredentials user = userCredentialsRepo.findByUsername(username).orElseThrow();
+         return user.isQuestionnaireStatus();
+    }
 }
