@@ -51,10 +51,9 @@ public class WatchlistController {
             return ResponseEntity.ok().body(updatedWatchlist);
         }
     }
-
-    //Endpoint to fetch stockdata from external api corresponding to a user
-    @GetMapping("/get-watchlist-stock/{username}")
-    public List<Map<String, Object>> getWatchlistStocksByUsername(@PathVariable String username) {
-        return watchlistService.getWatchlistStocksByUsername(username);
+    
+    @GetMapping("/get-watchlist-by-username/{username}")
+    public ResponseEntity<List<Watchlist>> getWatchlistByUsername(@PathVariable String username){
+    	return ResponseEntity.ok().body(watchlistService.getWatchlistByUsername(username));
     }
 }

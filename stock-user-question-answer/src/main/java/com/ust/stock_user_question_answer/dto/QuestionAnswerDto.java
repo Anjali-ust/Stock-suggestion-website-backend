@@ -3,7 +3,6 @@ package com.ust.stock_user_question_answer.dto;
 import java.util.List;
 
 public class QuestionAnswerDto {
-
     private String question;
     private String optionA;
     private String optionB;
