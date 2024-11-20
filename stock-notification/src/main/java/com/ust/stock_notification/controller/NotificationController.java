@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Optional;
 
-@CrossOrigin
+//@CrossOrigin
 @RestController
 @RequestMapping("/notification")
 public class NotificationController {
@@ -54,4 +54,25 @@ public class NotificationController {
     public String getThreshold(@PathVariable String stockId, @PathVariable String username) {
         return notificationService.getThresholdForStockAndUser(stockId, username);
     }
+    
+    @PutMapping("/update-threshold-by-stockId-and-username/{stockId}/{username}")
+    public ResponseEntity<?> updateThresholdByStockIdAndUsername(
+            @PathVariable(name = "stockId") String stockId,
+            @PathVariable(name = "username") String username,
+            @RequestBody Notification notification) {
+        // Validate input
+        if (notification.getThreshold() == null) {
+            return ResponseEntity.badRequest().body("Threshold value must be provided.");
+        }
+
+        // Call the service method to update the threshold
+        Notification updatedNotification = notificationService.updateThresholdByStockIdAndUsername(stockId, username, notification);
+
+        if (updatedNotification == null) {
+            return ResponseEntity.notFound().build();
+        }
+
+        return ResponseEntity.ok(updatedNotification);
+    }
 }
+

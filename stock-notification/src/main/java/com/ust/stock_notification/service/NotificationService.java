@@ -54,4 +54,20 @@ public class NotificationService {
         Optional<Notification> notification = notificationRepo.findByStockIdAndUsername(stockId, username);
         return notification.map(Notification::getThreshold).orElse("Threshold not found");
     }
+    
+    public Notification updateThresholdByStockIdAndUsername(String stockId, String username, Notification notification) {
+        // Retrieve the notification by stockId and username
+        Notification existingNotification = notificationRepo.findByStockIdAndUsername(stockId, username).get();
+
+        if (existingNotification == null) {
+            return null; // No matching notification found
+        }
+
+        // Update the threshold value
+        existingNotification.setThreshold(notification.getThreshold());
+
+        // Save the updated notification
+        return notificationRepo.save(existingNotification);
+    }
+
 }
