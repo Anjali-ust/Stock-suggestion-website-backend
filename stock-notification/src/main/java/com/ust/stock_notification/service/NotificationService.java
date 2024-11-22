@@ -69,5 +69,10 @@ public class NotificationService {
         // Save the updated notification
         return notificationRepo.save(existingNotification);
     }
+    
+    public List<Notification> getNotificationsByUsername(String username) {
+        return notificationRepo.findByUsername(username);
+    }
+    
 
 }

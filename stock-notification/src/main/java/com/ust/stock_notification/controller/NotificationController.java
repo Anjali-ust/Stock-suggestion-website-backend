@@ -74,5 +74,15 @@ public class NotificationController {
 
         return ResponseEntity.ok(updatedNotification);
     }
+    
+    
+    @GetMapping("/get-notification-by-username/{username}")
+    public ResponseEntity<List<Notification>> getNotificationsByUsername(@PathVariable String username) {
+        List<Notification> notifications = notificationService.getNotificationsByUsername(username);
+        if (notifications.isEmpty()) {
+            return ResponseEntity.noContent().build(); // 204 No Content if no notifications are found
+        }
+        return ResponseEntity.ok(notifications); // 200 OK with the list of notifications
+    }
 }
 
