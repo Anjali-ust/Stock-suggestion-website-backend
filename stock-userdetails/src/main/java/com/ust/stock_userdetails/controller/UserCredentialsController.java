@@ -101,4 +101,6 @@ public class UserCredentialsController {
 	   return ResponseEntity.ok().body(userCredentialsService.getQuestionnaireStatus(username));
 	   
    }
+   
+   //reset if username exists
 }
