@@ -31,6 +31,7 @@ public class UserCredentialsController {
     @PostMapping("/register")
     public UserCredentials register(@RequestBody UserCredentials user) {
         return userCredentialsService.register(user);
+        //register
     }
 
     @GetMapping("/validate-token")
